@@ -8,6 +8,7 @@ const AppHeader = ({ isMobile, drawerVisible, toggleDrawer }) => {
     <div
       style={{
         width: '100vw',
+        color: 'black',
         position: 'fixed',
         top: 0,
         left: 0,
@@ -21,7 +22,7 @@ const AppHeader = ({ isMobile, drawerVisible, toggleDrawer }) => {
         boxShadow: '0 2px 8px #f0f1f2'
       }}
     >
-      <h2 style={{ margin: 0 }}>Real Estate</h2>
+      <h2 style={{ margin: 50 }}>Real Estate</h2>
       {/* Dummy user info */}
       <div style={{ display: 'flex', alignItems: 'center' }}>
         <span style={{ marginRight: 12 }}>Hello, User!</span>

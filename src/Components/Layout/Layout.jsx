@@ -13,7 +13,7 @@ const LayoutComponent = () => {
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 992);
   const navigate = useNavigate();
-  const location = useLocation(); 
+  const location = useLocation();
 
   useEffect(() => {
     const handleResize = () => {
@@ -28,11 +28,11 @@ const LayoutComponent = () => {
     setDrawerVisible(!drawerVisible);
   };
 
-  const sidebarWidth = collapsed ? 80 : 250; // Adjust sidebar width based on collapsed state
+  const sidebarWidth = collapsed ? 80 : 218; // Adjust sidebar width based on collapsed state
 
 
   return (
-    <Layout style={{ minHeight: "100vh" ,minWidth: "100vw"}}>
+    <Layout style={{ minHeight: "100vh", minWidth: "100vw", border: "2px solid red" }}>
       {/* Sidebar for larger screens */}
       {!isMobile && (
         <Sidebar
@@ -48,16 +48,16 @@ const LayoutComponent = () => {
       {/* Layout for Header and Content */}
       <Layout
         style={{
-          marginLeft: !isMobile ? sidebarWidth : 0, // Push content to the right when sidebar is visible
-        //   transition: "margin-left 0.2s", // Smooth transition when collapsing or expanding the sidebar
+          marginLeft: !isMobile ? sidebarWidth : 0,
         }}
       >
-        {/* Header */}
         <HeaderComponent isMobile={isMobile} drawerVisible={drawerVisible} toggleDrawer={toggleDrawer} />
 
-        {/* Content */}
-        
+        <Content style={{ padding: 16, border: "2px solid blue", marginTop: 70 }}>
+          <Outlet />
+        </Content>
       </Layout>
+
     </Layout>
   );
 };
