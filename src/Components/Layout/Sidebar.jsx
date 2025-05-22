@@ -46,12 +46,12 @@ const Sidebar = ({ collapsed }) => {
             label: 'Installments',
             onClick: () => navigate('/installments'),
           },
-          {
-            key: '3',
-            icon: <ApartmentOutlined />,
-            label: 'Project Location',
-            onClick: () => navigate('/project-location'),
-          },
+          // {
+          //   key: '3',
+          //   icon: <ApartmentOutlined />,
+          //   label: 'Project Location',
+          //   onClick: () => navigate('/project-location'),
+          // },
           {
             key: '4',
             icon: <ProjectOutlined />,

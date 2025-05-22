@@ -32,7 +32,7 @@ const LayoutComponent = () => {
 
 
   return (
-    <Layout style={{ minHeight: "100vh", minWidth: "100vw", border: "2px solid red" }}>
+    <Layout style={{ minHeight: "100vh"}}>
       {/* Sidebar for larger screens */}
       {!isMobile && (
         <Sidebar
@@ -53,7 +53,7 @@ const LayoutComponent = () => {
       >
         <HeaderComponent isMobile={isMobile} drawerVisible={drawerVisible} toggleDrawer={toggleDrawer} />
 
-        <Content style={{ padding: 16, border: "2px solid blue", marginTop: 70 }}>
+        <Content style={{ padding: 16,  marginTop: 70 }}>
           <Outlet />
         </Content>
       </Layout>

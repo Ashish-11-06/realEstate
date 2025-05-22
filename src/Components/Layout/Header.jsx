@@ -12,7 +12,7 @@ const AppHeader = ({ isMobile, drawerVisible, toggleDrawer }) => {
         position: 'fixed',
         top: 0,
         left: 0,
-        zIndex: 2000,
+        // zIndex: 2000,
         background: '#fff',
         // padding: '0 16px',
         display: 'flex',
